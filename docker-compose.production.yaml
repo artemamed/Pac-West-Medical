@@ -1,6 +1,0 @@
-services:
-  artemamed:
-      image: ${DOCKER_IMAGE}
-      ports:
-        - 1004:3000
-      restart: always
