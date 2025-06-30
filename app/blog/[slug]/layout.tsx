@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blogs | Surgical Instrument Blogs | Artema Medical",
-  description: "Our Blogs section helps professional surgeons and doctors understand the usage, benefits, and reliability of our instruments.",
+  title: "",
+  description: "",
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <div>
       <div>{children}</div>
-      <div className="z-50 fixed bottom-5 right-5">
+      <div className="z-50 fixed bottom-5 right-5  ">
         <ScrollTop />
       </div>
     </div>

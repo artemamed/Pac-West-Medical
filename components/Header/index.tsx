@@ -6,9 +6,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
-import logo from "@/public/images/logo.svg";
+import logo from "@/public/images/logo.png";
 import SearchInput from "./SearchInput";
-import CartButton from "./CartButton";
 import Support from "./Support";
 import ProductDropDown from "./ProductDropDown";
 import LayoutWrapper from "../Wrapper/LayoutWrapper";
@@ -44,7 +43,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center space-x-2 flex-grow">
           <Link href="/">
-            <Image src={logo} alt="Artema Logo" width={130} height={130} />
+            <Image src={logo} alt="Artema Logo" width={150} height={150} />
           </Link>
         </div>
 
@@ -62,12 +61,6 @@ export default function Navbar() {
           >
             About Us
           </Link>
-          <Link
-            href="/distributors"
-            className={`${pathname === '/distributors' ? 'text-[#008080]' : 'hover:text-[#008080]'}`}
-          >
-            Distributors
-          </Link>
           <div className={`${pathname === '/category' ? 'text-[#008080]' : ''}`}>
             <ProductDropDown closeMenu={() => setIsMenuOpen(false)} />
           </div>
@@ -76,6 +69,12 @@ export default function Navbar() {
             className={`${pathname === '/certification' ? 'text-[#008080]' : 'hover:text-[#008080]'}`}
           >
             Certification
+          </Link>
+            <Link
+            href="/podcast"
+            className={`${pathname === '/podcast' ? 'text-[#008080]' : 'hover:text-[#008080]'}`}
+          >
+            Podcast
           </Link>
           <div className={` ${pathname === '/ifu' ? 'text-[#008080]' : ''}`}>
             <Support />
@@ -164,14 +163,14 @@ export default function Navbar() {
             <Link href="/about" className="block px-4 py-2 hover:text-[#008080] hover:bg-gray-100">
               About Us
             </Link>
-            <Link href="/distributors" className="block px-4 py-2 hover:text-[#008080] hover:bg-gray-100">
-              Distributors
-            </Link>
             <div className="block px-4 py-2">
               <ProductDropDown closeMenu={() => setIsMenuOpen(false)} />
             </div>
             <Link href="/certification" className="block px-4 py-2 hover:text-[#008080] hover:bg-gray-100">
               Certification
+            </Link>
+             <Link href="/podcast" className="block px-4 py-2 hover:text-[#008080] hover:bg-gray-100">
+              Podcast
             </Link>
             <div className="block px-4 py-2 hover:text-[#008080] hover:bg-gray-100">
               <Support />

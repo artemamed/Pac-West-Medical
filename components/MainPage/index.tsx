@@ -12,15 +12,11 @@ import TrustedStandard from './TrustedStandard';
 export default function MainPageData() {
     return (
         <>
-            <header>
-                <HeroSection />
-            </header>
+            <HeroSection />
             <MedicalEquipment />
             <TrustedStandard />
             <Sustainability />
-            <div className='pt-[6rem]'>
-                <WhyChooseUs />
-            </div>
+            <WhyChooseUs />
             <ReliableInstrumnet />
             <TrustedUser />
             {/* <BlogSection /> */}

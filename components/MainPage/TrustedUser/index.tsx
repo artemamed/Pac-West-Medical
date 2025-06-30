@@ -1,34 +1,35 @@
 import LayoutWrapper from "@/components/Wrapper/LayoutWrapper";
 import { MoveLeft, MoveRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 
 const TrustedUser = () => {
   const testimonials = [
     {
       stars: 5,
-      text: "I would like to thank Artema Medical for the quality of their surgical instruments. They are not only durable but also ergonomically designed. They help me a lot in performing complex procedures.",
+      text: "We’ve been working with Pac West for several years. We’ve built full open shoulder and laminectomy trays using cost-effective, high-quality tools, and our surgeons.",
       name: "Johnson Smith",
       role: "Medical Superintendent at Evercare",
       image: "/images/trusted/test1.webp",
     },
     {
       stars: 5,
-      text: "We have been working with Artema Medical for 10 years. Their medical tools are easy to handle and highly affordable. They ensure quality medical tools and reliability at the same working time at Artema Medical.",
+      text: "I trust Pac West tools for life-saving heart procedures. The clamps never slip and the needle holders rotate perfectly. This is how surgical instruments should perform.",
       name: "Clark Anderson",
       role: "Director OPD at AHD",
       image: "/images/trusted/test2.webp",
     },
     {
       stars: 5,
-      text: "Artema Medical is a best medical equipment suppliers for several years. Their tools are safe and highly effective. They have helped significantly in improving effective the of our services.",
+      text: "Pac West is a best medical equipment suppliers for several years. Their tools are safe and highly effective. They have helped significantly in improving effective the of our services.",
       name: "Lopez Williams",
       role: "Head of Procurement",
       image: "/images/trusted/test3.jpeg",
     },
     {
       stars: 5,
-      text: "As a senior doctor, I always receive positive feedback from my staff regarding the quality and efficacy of their hospital equipment. Without a doubt, they are raising the standard of healthcare to a great extent.",
+      text: "As a senior doctor, I always receive positive feedback from my staff regarding the quality of their hospital equipment. They are raising the standard of healthcare to a great extent.",
       name: "Mitchell Wright",
       role: "Director OPD at AHD",
       image: "/images/trusted/test4.webp",
@@ -67,7 +68,7 @@ const TrustedUser = () => {
     <LayoutWrapper>
       <div className="py-12 md:py-20">
         <div className="flex flex-col space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl text-gray-800 font-semibold text-center md:text-left">
+          <h2 className="text-2xl md:text-4xl xl:text-5xl font-bold mb-4 bg-gradient-to-r from-[#008080] to-black bg-clip-text text-transparent drop-shadow">
             We are trusted by
           </h2>
 
@@ -75,9 +76,14 @@ const TrustedUser = () => {
             {testimonials
               .slice(currentIndex, currentIndex + (isWideScreen ? 2 : 1))
               .map((testimonial, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="w-full md:max-w-md p-4 md:p-10 border rounded-xl shadow-md bg-white"
+                  className="w-full max-w-md p-6 md:p-8 bg-white/80 backdrop-blur-md border border-[#00808022] rounded-2xl shadow-xl mx-2 flex flex-col justify-between
+                  hover:shadow-[0_8px_32px_0_#00808022] transition-shadow duration-300"
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  layout
                 >
                   <div className="flex mb-4 md:p-4 ">
                     {Array.from({ length: testimonial.stars }, (_, i) => (
@@ -112,24 +118,24 @@ const TrustedUser = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
           </div>
 
-          <div className="flex justify-center items-center gap-4 md:gap-6">
+          <div className="flex justify-center items-center gap-6 mt-8">
             <button
               onClick={handlePrev}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-3 rounded-full bg-[#008080]/10 hover:bg-[#008080]/20 transition"
               aria-label="Previous testimonial"
             >
-              <MoveLeft className="w-5 h-5 md:w-6 md:h-6" />
+              <MoveLeft className="w-6 h-6 text-[#008080]" />
             </button>
             <button
               onClick={handleNext}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-3 rounded-full bg-[#008080]/10 hover:bg-[#008080]/20 transition"
               aria-label="Next testimonial"
             >
-              <MoveRight className="w-5 h-5 md:w-6 md:h-6" />
+              <MoveRight className="w-6 h-6 text-[#008080]" />
             </button>
           </div>
         </div>

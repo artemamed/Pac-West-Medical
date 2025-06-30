@@ -1,106 +1,75 @@
+"use client";
+
 import LayoutWrapper from "@/components/Wrapper/LayoutWrapper";
 import Image from "next/image";
 import React from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 const trusted = [
   {
-    title: "Scalpels for Precision Surgery",
+    title: "CE Certified",
     imageUrl: "/images/trusted/CE.svg",
   },
   {
-    title: "Scalpels for Precision Surgery",
+    title: "FDA Approved",
     imageUrl: "/images/trusted/FDA.svg",
   },
   {
-    title: "Scalpels for Precision Surgery",
+    title: "ISO Standard",
     imageUrl: "/images/trusted/ISO.svg",
   },
-  {
-    title: "Scalpels for Precision Surgery",
-    imageUrl: "/images/trusted/ASTM.svg",
-  },
 ];
 
-const products = [
-  {
-    title: "Rollator Walker",
-    price: "55.64",
-    imageUrl: "/images/slider/slide1.png",
-    location: "/product/rollator-walker-in-large-size",
-  },
-  {
-    title: "Bone Rib Shear ",
-    price: "158",
-    imageUrl: "/images/slider/slide22.webp",
-    location: "/product/blumenthalangled",
-  },
-  {
-    title: "TC needleholde",
-    price: "110",
-    imageUrl: "/images/slider/slide33.png",
-    location: "/product/martin-type",
-  },
-];
-
+const fadeIn = {
+  hidden: { opacity: 0, scale: 0.95 },
+  show: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { delay: 0.2 + i * 0.12, duration: 0.5, type: "spring", stiffness: 200 },
+  }),
+};
 
 const TrustedStandard = () => {
-  const route = useRouter();
-  const handleProductClick = () => {
-    route.push('/category');
-  };
   return (
-    <LayoutWrapper className="min-h-screen md:py-12">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 sm:mb-10">
-        Trusted by Global Health Standards
-      </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
-        {trusted.map((product, index) => (
-          <div
-            key={index}
-            className="border-none p-2 sm:p-4 bg-white flex items-center justify-center"
-          >
-            <Image
-              width={100}
-              height={100}
-              src={product.imageUrl}
-              alt={product.title}
-              className="w-[80px] h-[80px] lg:w-[120px] lg:h-[120px] object-contain"
-            />
-          </div>
-        ))}
-        <Image
-          width={100}
-          height={100}
-          src="/images/trusted/duns.png"
-          alt="Scalpels for Precision Surgery"
-          className="w-[150px] h-[80px] lg:h-[120px] lg:w-[300px] object-contain md:mt-[1rem] ml-[1rem]"
-        />
-      </div>
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-10 mt-10 leading-tight">Best-Selling Products</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {products.map((product, index) => (
-          <div
-            key={index}
-            className="border-none rounded-lg p-4 bg-white"
-          >
-            <Image
-              width={300}
-              height={300}
-              src={product.imageUrl}
-              alt={product.title}
-              className="w-full h-[15rem] lg:h-[20rem] p-5 object-contain mb-4 border shadow-md rounded-xl"
-            />
-            <h3 className="text-lg mb-2 font-semibold">{product.title}</h3>
-            {/* <p className="text-xl font-bold mb-4">${product.price}</p> */}
-            <Link key={index} href={product.location.startsWith("/") ? product.location : `/${product.location}`} passHref>
-              <button className="border text-teal-600 border-teal-600 py-2 px-4 rounded hover:bg-teal-800 hover:text-white transition" onClick={handleProductClick}>
-                Buy Now
-              </button>
-            </Link>
-          </div>
-        ))}
+    <LayoutWrapper className="md:pt-[5rem] md:pb-[7rem]">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 sm:mb-10 text-black tracking-tight"
+      >
+        <span className="bg-gradient-to-r from-[#008080] to-black bg-clip-text text-transparent">
+          Trusted by Global Health Standards
+        </span>
+      </motion.h2>
+      <div className="w-full flex justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6 w-full max-w-6xl items-center">
+          {trusted.map((product, index) => (
+            <motion.div
+              key={index}
+              custom={index}
+              variants={fadeIn}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+              className="bg-white/80 border border-[#00808022] rounded-2xl p-3 sm:p-5 flex flex-col items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-200 group"
+              whileHover={{
+                scale: 1.06,
+                boxShadow: "0 4px 24px 0 #00808033",
+              }}
+            >
+              <Image
+                width={120}
+                height={120}
+                src={product.imageUrl}
+                alt={product.title}
+                className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] object-contain mb-2"
+              />
+              <span className="text-xs md:text-sm text-black/70 mt-1 text-center">{product.title}</span>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </LayoutWrapper>
   );

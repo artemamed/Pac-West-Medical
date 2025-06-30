@@ -3,9 +3,9 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-[#004040] p-4 md:p-8 lg:p-12 xl:p-16 text-white transition-all duration-300">
+    <div className="bg-[#004040] p-4 md:p-8 lg:p-12 xl:p-16 text-white transition-all duration-300 mt-[6rem]">
       <h2 className="text-2xl md:text-4xl xl:text-5xl font-bold mb-6 md:mb-10 animate-fade-in text-center">
-        Why Choose Us
+        Why Choose Pac West?
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 ">
@@ -14,23 +14,23 @@ const WhyChooseUs = () => {
             icon: (
               <CircleDollarSign className="w-8 md:w-10 xl:w-12 md:h-8 lg:h-10 -mb-2" />
             ),
-            title: "Extensive Experience",
+            title: "20 years of Reliable Experience",
             description:
-              "We have four decades of experience that prove our reliability and commitment.",
+              "Having 20 years of experience in mastering medical instruments, we provide tools that are used by surgeons every day.",
           },
           {
             icon: (
               <Microscope className="w-8 md:w-10 xl:w-12 lg:h-10 md:h-8 -mb-2" />
             ),
-            title: "Cost-Effective",
+            title: "Cost-Smart Solutions",
             description:
-              "We save a considerable amount of money for our customers by providing suitable budget offers.",
+              "We design durable equipment that performs without straining your for budget.",
           },
           {
             icon: <Leaf className="w-8 md:w-10 xl:w-12 lg:h-10 md:h-8 -mb-2" />,
-            title: "100% Satisfaction",
+            title: "Your Guaranteed Satisfaction",
             description:
-              "Our dedicated team of scientists and medical professionals is always available to ensure 100 percent customer satisfaction.",
+              "Our medical professionals and team work together to solve your specific challenges.",
           },
         ].map((item, index) => (
           <div

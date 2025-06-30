@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy policy | Medical Suppliers | Artema Medical",
-  description: "Artema Medical, keep following up on our customer privacy. We store all data and confidential information and take care of clients' privacy.",
+  title: "",
+  description: "",
 };
 
 export default function RootLayout({
