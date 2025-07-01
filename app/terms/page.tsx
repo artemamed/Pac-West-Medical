@@ -1,27 +1,52 @@
 import LayoutWrapper from '@/components/Wrapper/LayoutWrapper';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 
 const policies = [
     {
-        title: 'Written Orders',
+        title: 'General Terms',
         description:
-            'All offers are invalid unless agreed upon in written form. Orders will only be processed after confirmation by written order',
+            'The terms standardize the utilization of pacwest.com. Viewing, downloading, or using this site is by all the laws and regulations. And in case you disagree with any of the provisions of these terms, you are not supposed to use this site',
     },
     {
-        title: 'Customer Responsibility',
+        title: 'Intellectual Property',
         description:
-            'Artema Medical is not responsible for any mistake or negligence regarding the information provided by the customer',
+            'The whole website content, such as text, graphics, logos, images of its products, and designs, is the intellectual property of PacWest Surgical and is under intellectual property laws. No reproduction or use is allowed.',
     },
     {
-        title: 'Data as a Guideline',
+        title: 'Information on the product, pricing',
         description:
-            'Any information or data related to the company serves only as a guideline and becomes part of the contract only after written consent from both parties.',
+            'We do our best to give all the necessary information about our product and the costs. We do not, however, warrant completeness or accuracy of information, which is always the case. Pacwest Surgical Instruments does not guarantee that it will not introduce amendments or changes in the specifications of products without any notice or changes in prices.',
     },
     {
-        title: 'Product Shelf-Life',
+        title: 'Orders and payment terms',
         description:
-            'There will be no guarantee regarding the shelf-life of the products unless explicitly stated in the product description.',
+            'The orders are to be accepted and the availability. Unless otherwise agreed, payment is due before dispatch in full. In the case of larger orders, conditions of a partial payment can be exercised as in our Payment Policy.',
+    },
+    {
+        title: 'Delivery & Shipping',
+        description:
+            'We strive to dispatch orders with reference to delivery dates and times. We cannot do anything about delays through couriers, customs, or even natural occurrences. All information can be found on our Delivery Information page.',
+    },
+    {
+        title: 'Guarantee, Return, and Refunds',
+        description:
+            'We do not accept returns unless they fall under our Return & Refund Policy. Customers should make sure that they do not use the products and have to put the products back in the original packaging.',
+    },
+    {
+        title: 'Liability Limitation',
+        description:
+            'Pacwest Surgical Instruments does not assume responsibility of any kind of direct, indirect, incidental, or consequential damages that may arise because of the use or failure to use our products or site.',
+    },
+    {
+        title: 'Terms changes',
+        description:
+            'It is our right to change these terms at any time without prior notification. Further access to the site means that you agree to the new terms.',
+    },
+    {
+        title: 'Governing Law',
+        description:
+            'The Pakistani laws apply in these terms. In case of any dispute in regard to these terms, the matter will be settled in the proper courts of Lahore, Pakistan.',
     },
 ];
 
@@ -41,9 +66,6 @@ const Home = () => {
 
                 {/* Policies Section */}
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-xl font-semibold text-teal-900 mb-4">
-                        General Policy
-                    </h2>
                     {policies.map((policy, index) => (
                         <div
                             key={index}
@@ -68,7 +90,7 @@ const Home = () => {
                 </div>
 
                 {/* Verified Badge */}
-                <div className="flex justify-end md:mt-8">
+                {/* <div className="flex justify-end md:mt-8">
                     <div className="flex flex-col items-center">
                         <Image
                             width={100}
@@ -78,7 +100,7 @@ const Home = () => {
                             className="w-32 md:w-56 xl:w-72 h-auto object-contain"
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
         </LayoutWrapper>
 

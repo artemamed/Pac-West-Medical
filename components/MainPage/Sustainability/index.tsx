@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import sustainability from "@/public/images/Sustainability.png";
+import sustainability from "@/public/images/Sustainability1.svg";
 import { Button } from "@/components/ui/button";
 import LayoutWrapper from "@/components/Wrapper/LayoutWrapper";
 import Link from "next/link";
@@ -72,7 +72,7 @@ export default function Sustainability() {
                     <Image
                         src={sustainability}
                         alt="Surgical Tools"
-                        className="w-full h-[15rem] lg:h-[25rem] object-contain xl:ml-[7rem] md:mt-[3rem] lg:mt-0 xl:-mt-[2rem] md:ml-[4rem]"
+                        className="w-full h-[15rem] lg:h-[20rem]  object-contain xl:ml-[7rem] md:mt-[5rem] lg:mt-0  md:ml-[4rem]"
                         priority
                     />
                 </motion.div>

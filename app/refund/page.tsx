@@ -1,46 +1,54 @@
 import LayoutWrapper from '@/components/Wrapper/LayoutWrapper';
-import { CircleOff, Clock4, NotebookPen, ShieldAlert, Truck, Undo2 } from 'lucide-react';
+import { CircleOff, Clock4, NotebookPen, Truck, Repeat2 } from 'lucide-react';
 import React from 'react';
 
 const policies = [
     {
         icon: <NotebookPen />,
-        title: 'Eligibility for Refund',
-        description:
-            'Refund requests can be made within 7 days of the purchase date. Products must be in their original condition, unused, and in the original packaging. Proof of purchase (invoice or receipt) is required for all refund requests.',
+        title: 'Returns – Eligibility & Conditions',
+        description: (
+            <>
+                Our aim is to make you satisfied with your purchase. If you receive a defective, damaged, or misrepresented product, we are here to assist you.<br /><br />
+                <ul className="list-disc ml-6 space-y-1">
+                    <li>Goods must be in unopened, intact packaging and not sterilized.</li>
+                    <li>Return requests must be made within <strong>7 days after delivery</strong>.</li>
+                    <li>Incorrect order returns must be reported within <strong>48 hours</strong> of receipt.</li>
+                </ul>
+            </>
+        ),
     },
     {
-        icon: <Undo2 />,
+        icon: <CircleOff />,
+        title: 'Goods That Are Nonrefundable',
+        description: (
+            <ul className="list-disc ml-6 space-y-1">
+                <li>Surgical instruments that are used or sterilized.</li>
+                <li>Individually made or engraved instruments.</li>
+                <li>Goods that break because of poor rules and misuse.</li>
+            </ul>
+        ),
+    },
+    {
+        icon: <Clock4 />,
         title: 'Refund Process',
         description:
-            'To initiate a refund, please contact our customer service team. Provide your order number and reason for the refund. Our team will review your request and may ask for additional information or photos of the product. Once your refund request is approved, we will issue a return authorization and provide instructions for returning the item.',
+            'As soon as we receive and inspect your returned item, we will inform you about the approval or declination of your refund. When approved, your refund will be sent back to your account within 7-10 working days using your original payment method.',
+    },
+    {
+        icon: <Repeat2 />,
+        title: 'Exchanges',
+        description:
+            'If you receive a defective or broken product and want to exchange it, please contact our support staff. We will organize a substitute or propose an alternative solution.',
     },
     {
         icon: <Truck />,
         title: 'Return Shipping',
         description:
-            'Customers are responsible for return shipping costs unless the item is defective or the wrong item was sent. We recommend using a trackable shipping service or purchasing shipping insurance for items, as we cannot guarantee that we will receive your returned item.',
-    },
-    {
-        icon: <Clock4 />,
-        title: 'Refund Timeline',
-        description:
-            'Once we receive the returned item, we will process your refund within 5-10 business days. Refunds will be issued to the original payment method used at the time of purchase',
-    },
-    {
-        icon: <ShieldAlert />,
-        title: 'Defective or Damaged Products',
-        description:
-            'Once we receive the returned item, we will process your refund within 5-10 business days. Refunds will be issued to the original payment method used at the time of purchase',
-    },
-    {
-        icon: <CircleOff />,
-        title: 'Non-Refundable Items',
-        description:
-            'Artema Medical reserves the right to modify this refund policy at any time. Changes will be posted on our website, and the revised policy will apply to all purchases made after the effective date.',
+            'Return shipping costs are your responsibility unless the return is due to a product fault or shipping error. We recommend using a trackable shipping service or shipping insurance, as we cannot guarantee receipt of your returned item.',
     },
 ];
-const Home = () => {
+
+const RefundPolicy = () => {
     return (
         <LayoutWrapper className="min-h-screen flex justify-center items-center py-8">
             <div className="max-w-screen-lg w-full">
@@ -50,7 +58,7 @@ const Home = () => {
                         Refund Policy
                     </h1>
                     <p className="text-[#666666] mt-2 max-w-3xl mx-auto text-base sm:text-lg">
-                        At Artema Medical, we are committed to providing high-quality surgical instruments. If you are not completely satisfied with your purchase, we offer a refund policy to ensure your confidence in our products.
+                        At Pac West, your satisfaction is our priority. Please review our refund and return policy for complete peace of mind when shopping with us.
                     </p>
                 </div>
 
@@ -65,16 +73,14 @@ const Home = () => {
                                 </span>
                                 <span className="text-base md:text-xl">{policy.title}</span>
                             </h3>
-
                             {/* Description Column */}
-                            <p className="text-gray-600 ml-[3rem]">{policy.description}</p>
+                            <div className="text-gray-600 ml-[3rem]">{policy.description}</div>
                         </div>
                     ))}
                 </div>
             </div>
         </LayoutWrapper>
-
     );
 };
 
-export default Home;
+export default RefundPolicy;

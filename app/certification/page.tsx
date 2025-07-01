@@ -14,31 +14,25 @@ const Distributors = () => {
                 </div>
 
                 {/* Certification Cards Section */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 mb-16 px-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 mb-16 px-4">
                     {[
                         {
                             title: "ISO",
                             image: "/images/trusted/ISO.svg",
                             description:
-                                "Our ISO certification demonstrates our commitment to precision and reliability in developing and distributing top-quality surgical instruments.",
+                                "Our ISO mark proves the fact that we are committed to bringing precision and reliability in the development and distribution of the highest-quality instruments in surgery.",
                         },
                         {
                             title: "CE Mark Certification",
                             image: "/images/trusted/CE.svg",
                             description:
-                                "We proudly display the CE Mark, representing full compliance with the European Union’s key health and environmental standards.",
+                                "CE marking is a safety and quality assurance used to state that a product meets European Union (EU) safety, health, and environmental protection standards",
                         },
                         {
                             title: "FDA Clearance",
                             image: "/images/trusted/FDA.svg",
                             description:
-                                "We are pleased to inform our U.S. customers that our products meet the safety and efficacy criteria set by the U.S. Food and Drug Administration (FDA).",
-                        },
-                        {
-                            title: "D-U-N-S Registered",
-                            image: "/images/trusted/duns.png",
-                            description:
-                                "We display the D-U-N-S® Registered seal, showcasing our global credibility and commitment to transparency and trust.",
+                                "The FDA Clearance is a process through which the U.S. Food and Drug Administration (FDA) permits release of a medical device into the market using a judgment of substantial equivalence with a legally marketed device.z",
                         },
                     ].map((item, index) => (
                         <div
@@ -60,7 +54,7 @@ const Distributors = () => {
                                 <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
                                     {item.title}
                                 </h3>
-                                <p className="text-sm sm:text-base text-[#666666] leading-relaxed">
+                                <p className="text-sm sm:text-base text-[#666666] leading-relaxed text-justify">
                                     {item.description}
                                 </p>
                             </div>

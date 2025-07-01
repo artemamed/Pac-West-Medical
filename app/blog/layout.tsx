@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Latest Blogs About our Surgical Instruments",
+  description: "Read our latest blogs about surgical instruments – updates, usage tips, innovations, and insights for surgeons and dosctors.",
 };
 
 export default function RootLayout({

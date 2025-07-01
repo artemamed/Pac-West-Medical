@@ -1,5 +1,4 @@
 import LayoutWrapper from "@/components/Wrapper/LayoutWrapper";
-import Link from "next/link";
 import React from "react";
 import { FaCookieBite, FaLock, FaChartLine, FaUserShield } from "react-icons/fa";
 
@@ -8,105 +7,126 @@ const CookiePolicyPage: React.FC = () => {
         <LayoutWrapper className="min-h-screen py-10 flex flex-col items-center">
             {/* Container */}
             <div className="max-w-screen-lg w-full ">
+                {/* Header */}
                 <div className="text-center mb-8">
-
                     <h1 className="text-2xl md:text-4xl font-semibold text-center text-[#004040] mb-6">
-                        Cookie Policy
+                        Cookies Policy
                     </h1>
                     <p className="text-gray-600 mt-2 max-w-2xl mx-auto text-base sm:text-lg">
-                        At artemamed Medical, we are committed to protecting your privacy. This Cookie Policy explains how we use cookies and similar technologies on our website (
-                        <Link href="https://artemamed.com/" className="text-teal-700 underline hover:text-teal-900">
-                            https://artemamed.com/
-                        </Link>
-                        ).
+                        As PacWest, we care about the security of your data and the privacy of your personal life. This Privacy and Cookie Policy aims to explain how personal data is collected about you when visiting our website and how cookies are used on our site.
                     </p>
                 </div>
 
-                {/** Sections */}
+                {/* What is a Cookie? */}
                 <section className="mb-8 border-b pb-4">
                     <div className="flex items-center space-x-2 mb-4">
                         <FaCookieBite className="text-teal-700 text-xl md:text-2xl" />
                         <h2 className="text-xl md:text-2xl font-bold text-teal-900">
-                            What Are Cookies?
+                            What is a Cookie?
                         </h2>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed ml-[2rem]">
-                        Cookies are small text files placed on your device when you visit our Site. They help us enhance your experience by remembering your preferences and improving the functionality of our site.
+                        Cookies are small files, usually letters and numbers, stored by the website you visit on your device or browser. Alongside cookies, we may also use pixels and similar technologies to enhance your experience when visiting PacWest’s website, such as for contact form submissions.
                     </p>
                 </section>
 
+                {/* Legal Framework */}
                 <section className="mb-8 border-b pb-4">
                     <div className="flex items-center space-x-2 mb-4">
                         <FaUserShield className="text-teal-700 text-xl md:text-2xl" />
                         <h2 className="text-xl md:text-2xl font-bold text-teal-900">
-                            How We Use Cookies
+                            Legal Framework & Policy Changes
                         </h2>
                     </div>
-                    <ul className="list-disc space-y-2 text-gray-700 text-sm sm:text-base ml-[2rem]">
-                        <li>
-                            <strong>Essential Cookies:</strong> Necessary for Site operation, enabling features like secure areas.
-                        </li>
-                        <li>
-                            <strong>Performance Cookies:</strong> Collect data about how visitors use our Site, helping us improve.
-                        </li>
-                        <li>
-                            <strong>Functional Cookies:</strong> Remember choices like your username or language preferences.
-                        </li>
-                        <li>
-                            <strong>Targeting/Advertising Cookies:</strong> Deliver ads relevant to your interests and measure their effectiveness.
-                        </li>
-                    </ul>
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed ml-[2rem]">
+                        PacWest may update or change this Privacy and Cookie Policy at any time. We comply with applicable privacy regulations, including those from the Personal Data Protection Authority and other relevant laws. For full details on the processing of your data, please refer to our Website Visitor Clarification Text and our Personal Data Protection Policy.
+                    </p>
                 </section>
 
+                {/* Cookies: Purpose of Use */}
                 <section className="mb-8 border-b pb-4">
                     <div className="flex items-center space-x-2 mb-4">
-                        <FaCookieBite className="text-teal-700 text-xl md:text-2xl" />
+                        <FaChartLine className="text-teal-700 text-xl md:text-2xl" />
                         <h2 className="text-xl md:text-2xl font-bold text-teal-900">
-                            Types of Cookies We Use
+                            Cookies: Purpose of Use
                         </h2>
                     </div>
                     <ul className="list-disc ml-[2rem] space-y-2 text-gray-700 text-sm sm:text-base">
                         <li>
-                            <strong>Session Cookies:</strong> Temporary cookies deleted when you close your browser.
+                            Ensuring the minimum required functions and features of the website.
                         </li>
                         <li>
-                            <strong>Persistent Cookies:</strong> Remain on your device until deleted or expired.
+                            Verifying that the site operates as intended and performs smoothly.
+                        </li>
+                        <li>
+                            Safeguarding the legal and operational security of both you and PacWest Clinic.
                         </li>
                     </ul>
                 </section>
 
+                {/* Collection Method of Personal Data */}
+                <section className="mb-8 border-b pb-4">
+                    <div className="flex items-center space-x-2 mb-4">
+                        <FaUserShield className="text-teal-700 text-xl md:text-2xl" />
+                        <h2 className="text-xl md:text-2xl font-bold text-teal-900">
+                            Collection Method of Personal Data
+                        </h2>
+                    </div>
+                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed ml-[2rem]">
+                        Site visitors may provide identity details (such as name and surname), contact details (such as phone and e-mail), description, requests, complaints, and other personal information through our contact forms.
+                    </p>
+                </section>
+
+                {/* Transfer of Personal Data */}
                 <section className="mb-8 border-b pb-4">
                     <div className="flex items-center space-x-2 mb-4">
                         <FaLock className="text-teal-700 text-xl md:text-2xl" />
                         <h2 className="text-xl md:text-2xl font-bold text-teal-900">
-                            Your Choices Regarding Cookies
+                            Transfer of Personal Data
                         </h2>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed ml-[2rem]">
-                        You can manage your cookie preferences through your browser settings. Disabling cookies may affect functionality.
+                        We may share your data with trusted suppliers, domestic or foreign, for services such as IT, emailing, data analysis, or cloud storage, always within legal frameworks. Your data may also be shared with public institutions or organizations if required by law or for the protection of your or our rights and interests.
                     </p>
                 </section>
 
+                {/* Types of Cookies Used */}
+                <section className="mb-8 border-b pb-4">
+                    <div className="flex items-center space-x-2 mb-4">
+                        <FaCookieBite className="text-teal-700 text-xl md:text-2xl" />
+                        <h2 className="text-xl md:text-2xl font-bold text-teal-900">
+                            Types of Cookies Used
+                        </h2>
+                    </div>
+                    <ul className="list-disc ml-[2rem] space-y-2 text-gray-700 text-sm sm:text-base">
+                        <li>
+                            <strong>Necessary (Mandatory) Cookies:</strong> Required for security and for the site to operate as expected. These cannot be turned off and are essential for basic site operations.
+                        </li>
+                    </ul>
+                </section>
+
+                {/* Use and Control of Cookies */}
                 <section className="mb-8">
                     <div className="flex items-center space-x-2 mb-4">
-                        <FaChartLine className="text-teal-700 text-xl md:text-2xl" />
+                        <FaLock className="text-teal-700 text-xl md:text-2xl" />
                         <h2 className="text-xl md:text-2xl font-bold text-teal-900">
-                            Third-Party Cookies
+                            Use and Control of Cookies
                         </h2>
                     </div>
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed ml-[2rem]">
-                        Third-party cookies may be used for analytics or advertisements. These third parties have their own privacy policies, which we encourage you to review.
+                        You have the right to customize your preferences by adjusting your browser settings. Most browsers allow you to be warned before cookies are used, block or delete specific cookies, or manage your cookie settings for each device you use. See your browser’s help section for instructions.
                     </p>
                 </section>
 
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                    We may update this Cookie Policy from time to time. Changes will be posted on this page with the effective date. For questions, please contact us.
+                {/* Contact & Changes */}
+                <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-6">
+                    This Cookie Policy may be updated periodically. All changes will be posted on this page with the effective date. For questions, please contact us via our website.
                 </p>
             </div>
 
             {/* Footer */}
             <footer className="mt-8 text-center text-gray-600 text-sm">
-                <p>© 2024 artemamed Medical. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} PacWest Medical. All rights reserved.</p>
             </footer>
         </LayoutWrapper>
     );

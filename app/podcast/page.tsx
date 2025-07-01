@@ -1,320 +1,246 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { motion, AnimatePresence } from "framer-motion";
 import LayoutWrapper from "@/components/Wrapper/LayoutWrapper";
-import UpcomingPodcastButton from "@/components/podcast/UpcomingPodcastButton";
-import Image from "next/image";
+import React from "react";
 
-function Page() {
-  const [userEmail, setUserEmail] = useState("");
-  const specificEmail = "example@example.com"; // The specific email to check against
-
-  useEffect(() => {
-    const fetchUserEmail = async () => {
-      const email = await getUserEmail();
-      setUserEmail(email);
-    };
-
-    fetchUserEmail();
-  }, []);
-
-  const getUserEmail = async () => {
-    return "example@example.com";
-  };
-
-  return (
-    <div className="">
-      <div className="bg-gradient-to-tr from-black to-slate-800 w-full h-52 lg:h-60">
-        <LayoutWrapper className="text-white text-5xl sm:text-5xl md:text-6xl font-semi-bold pt-28 sm:pt-28 md:pt-24 lg:pt-[122px]">
-          Podcasts
-        </LayoutWrapper>
-        {userEmail === specificEmail && <UpcomingPodcastButton />}
-      </div>
-
-      <LayoutWrapper>
-        <div className=" md:w-1/2  lg:mt-24 mt-36 ">
-          {" "}
-          <Fade triggerOnce duration={4000}>
-            <div>
-              {" "}
-              <p className="md:text-3xl  lg:text-4xl  font-bold">
-                Welcome To The Podcast System
-              </p>
-              <p className="md:text-xl text-gray-800 mt-4 ">
-                {" "}
-                Join us on a journey through the intricacies of the energy and
-                healthcare industries, where we delve deep into innovative
-                solutions tailored to empower your business for sustainable
-                success and societal impact
-              </p>
-            </div>
-          </Fade>
-        </div>
-        <Image width={3000} height={3000} src="/images/lean.png" alt="" className="lg:hidden mt-4" />
-
-        <div className=" mt-28">
-          <div className="mt-6">
-            <h2 className="md:text-3xl mb-1 font-bold ">
-              The Lean Effect Podcast
-            </h2>
-            <h4 className="text-center my-4 font-semibold text-2xl">
-              {" "}
-              <u>
-                Lean is not just about the process, It&apos;s about people.
-              </u>{" "}
-            </h4>
-            <p className=" text-base md:text-lg text-gray-700 ">
-              Our mission is to apply lean principles in your role and in your
-              business. The Lean Effect Podcast focuses on lean principles for
-              holistic organizational efficiency and leadership development.
-              Featuring experts like John Ervin, episodes cover healthcare,
-              change management, and lean applications across diverse sectors.
-              It&apos;s a valuable resource for professionals aiming for
-              operational excellence through effective leadership and lean
-              methodologies.
-            </p>
-            <div className="md:flex justify-between">
-              <div className="md:w-1/2">
-                <span className="font-bold md:text-xl  ">Topic: </span>
-                <p className="md:text-lg">
-                  {" "}
-                  <span className="font-semibold">
-                    {" "}
-                    “John Ervin: (EP 114) Lean:
-                  </span>{" "}
-                  Beyond Processes, Emphasizing People”
-                </p>
-                <span className="font-bold md:text-xl mt-2 ">Title:</span>
-                <p className="md:text-lg">
-                  {" "}
-                  In this episode, John Ervin explores the holistic nature of
-                  Lean principles, highlighting their focus on not just
-                  optimizing processes, but also prioritizing the well-being and
-                  engagement of people within organizations.
-                </p>
-                <br />
-                <span className="font-bold md:text-xl ">Podcast Link: </span>
-                <Link
-                  href="https://podcasts.apple.com/ru/podcast/john-ervin-ep-114-lean-is-not-just-about-process-its/id1547155147?i=1000578737238"
-                  className="md:text-lg text-blue-700"
-                >
-                  {" "}
-                  <u>
-                    https://podcasts.apple.com/ru/podcast/john-ervin-ep-114-lean-is-not-just-about-process-its/id1547155147?i=1000578737238
-                  </u>
-                </Link>
-              </div>
-              <Zoom triggerOnce>
-                {" "}
-                <div className="my-2">
-                  <Image width={3000} height={3000} src="/images/lean.png" alt="" />
-                </div>
-              </Zoom>
-            </div>
-
-            {/* <div className="mt-8">
-              <NextVideo src={sample} />
-            </div> */}
-            <div className=" text-gray-700 md:text-lg">
-              <b>Description:</b> <br />
-              In this engaging episode, John Ervin, boasting over 20 years of
-              invaluable healthcare leadership experience spanning both military
-              medicine and the civilian sector, delves into his journey of
-              leadership development, starting with his formative years in the
-              United States military. He shares insights on how his military
-              service laid the groundwork for his involvement with lean
-              methodologies, highlighting the transformative impact of lean
-              principles on organizational efficiency and effectiveness. <br />{" "}
-              During the discussion, John delves into the intricacies of change
-              management, emphasizing its pivotal role in driving organizational
-              growth and adaptation. He elucidates on the stages of change,
-              emphasizing the importance of fostering awareness, desire, and
-              knowledge among team members to facilitate successful transitions
-              and improvements within healthcare settings. A notable highlight
-              of the conversation is John&apos;s admiration&quot; for
-              Re-Creating the Corporation&quot; by Russell L. <br /> Ackoff,
-              which he cites as his favorite book. This influential work likely
-              served as a cornerstone in shaping John&apos;s perspectives on
-              organizational dynamics and strategic management. As the
-              conversation unfolds, listeners are encouraged to explore the
-              diverse book recommendations provided by guests on the show,
-              inviting them to expand their knowledge and insights. If
-              you&apos;re intrigued by John&apos;s recommendation or wish to
-              explore other insightful reads recommended by our esteemed guests,
-              be sure to check out our curated list of top book recommendations.
-              And don&apos;t forget to share your own favorite book with us;
-              we&apos;re eager to discover new literary gems that resonate with
-              our audience.
-            </div>
-            <div>
-              {" "}
-              <span className="font-bold md:text-xl ">Guest: </span>
-              <span className="md:text-lg"> Jhon Ervin </span> <br />
-              <span className="font-bold md:text-xl ">Gmail: </span>
-              <span className="md:text-lg"> johnaervin3@gmail.com </span> <br />
-              <span className="font-bold md:text-xl ">LinkedIn: </span>
-              <Link href="https://www.linkedin.com/in/johnaervin/">
-                <span className="md:text-lg text-blue-700">
-                  {" "}
-                  <u>https://www.linkedin.com/in/johnaervin/</u>{" "}
-                </span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-10">
-            <h1 className="font-bold md:text-3xl">Podcast #215</h1>
-            <h2 className="md:text-3xl mb-3 mt-5 font-bold ">
-              Lean & Patient Safety
-            </h2>
-            <div className="md:flex justify-between">
-              <div className="md:w-1/2 ">
-                <span className="font-bold md:text-xl ">Topic: </span>
-                <p className="md:text-lg ">
-                  {" "}
-                  “John Ervin, Lean & Patient Safety in the Operating Room by
-                  Mark Graban”{" "}
-                </p>
-                <span className="font-bold md:text-xl ">Title: </span>
-                <p className="md:text-lg ">
-                  {" "}
-                  In this episode, John Ervin explores the holistic nature of
-                  Lean principles, highlighting their focus on not just
-                  optimizing processes, but also prioritizing the well-being and
-                  engagement of people within organizations.
-                </p>
-                <span className="font-bold md:text-xl  ">
-                  Podcast Link:{" "}
-                </span>{" "}
-                <br />
-                <Link
-                  href="https://www.leanblog.org/2015/02/podcast-215-john-ervin-lean-patient-safety-in-the-operating-room/"
-                  className="md:text-lg text-blue-700"
-                >
-                  {" "}
-                  <u className="text-md ">
-                    {" "}
-                    https://www.leanblog.org/2015/02/podcast-215-john-ervin-lean-patient-safety-in-the-operating-room/
-                  </u>{" "}
-                </Link>
-              </div>
-              <Zoom triggerOnce>
-                {" "}
-                <div className=" my-2 md:-mt-8 ">
-                  <Image width={3000} height={3000} src="/images/lean.png" alt="Mark Graban" />
-                  <h4 className="text-center font-bold">Mark Graban </h4>
-                </div>
-              </Zoom>
-            </div>
-            {/* <div className="mt-8">
-              <NextVideo src={sample} />
-            </div> */}
-            <div className="mt-2   text-gray-700 md:text-lg">
-              <b>Description:</b>
-              <br />
-              Today&apos;s guest is my dear friend John Ervin, and it&apos;s a
-              pleasure to have him join us as we sit down together in San
-              Antonio for this episode. With nearly 20 years of extensive
-              healthcare leadership experience, John has made significant
-              contributions in both military medicine and the civilian sector.
-              Throughout his career, he has held managerial and directorial
-              positions in various hospital and surgical center settings,
-              bringing a wealth of expertise to the table.
-              <br /> In an exciting 2022 update, John has become a valued member
-              of our team, now serving as my esteemed colleague at Value
-              Capture. Together, we had the opportunity to collaborate on an
-              engagement with a prominent Philadelphia health system, leveraging
-              our collective knowledge and passion for driving positive change
-              in healthcare. <br />
-              Our shared enthusiasm for Lean methodologies and, more
-              importantly, patient safety, unites us in our mission. We firmly
-              believe in the crucial role that organizational culture and
-              leadership play in fostering and sustaining a culture of safety
-              within healthcare environments. Today&apos;s conversation will
-              center around these fundamental principles, exploring how the
-              right culture and leadership can nurture a safe and supportive
-              environment for both patients and healthcare professionals alike.
-            </div>
-          </div>
-          <div className="mt-10">
-            <h2 className="md:text-3xl mb-3 mt-5 font-bold ">
-              Inspiring Careers in Nursing
-            </h2>
-            <div className="md:flex justify-between">
-              <div className="md:w-1/2 ">
-                <span className="font-bold md:text-xl ">Title: </span>
-                <p className="md:text-lg ">
-                  {" "}
-                  Nurses in the Military and Consulting with John Ervin WXV&U
-                  Health
-                </p>
-                <br />
-                <span className="font-bold md:text-xl  ">
-                  Podcast Link:{" "}
-                </span>{" "}
-                <br />
-                <Link
-                  href="https://podcasts.apple.com/us/podcast/wxv-u-health/id1651109403?i=1000633032832"
-                  className="md:text-lg "
-                >
-                  {" "}
-                  <u className="text-md text-blue-700">
-                    {" "}
-                    https://podcasts.apple.com/us/podcast/wxv-u-health/id1651109403?i=1000633032832
-                  </u>{" "}
-                </Link>
-              </div>
-              <Zoom triggerOnce>
-                {" "}
-                <div className="  md:-mt-8 ">
-                  <Image width={3000} height={3000} src="/images/lean.png" alt="careers in Nursing" />
-                  <h4 className="text-center font-bold">Mark Graban </h4>
-                </div>
-              </Zoom>
-            </div>
-            {/* <div className="mt-8">
-              <NextVideo src={sample} />
-            </div> */}
-            <div className="mt-2   text-gray-700 md:text-lg">
-              <b>Description:</b>
-              <br />
-              This is the third episode of Inspiring Careers in Nursing, the
-              podcast where we hear from Villanova Fitzpatrick College of
-              Nursing Alumni about the different career paths they have taken to
-              inform and inspire our listeners.
-              <br /> In an exciting 2022 update, John has become a valued member
-              of our team, now serving as my esteemed colleague at Value
-              Capture. Together, we had the opportunity to collaborate on an
-              engagement with a prominent Philadelphia health system, leveraging
-              our collective knowledge and passion for driving positive change
-              in healthcare. <br />
-              In this episode, Nicole Blanche Guerin interviewed John Ervin.
-              John is a doctoral candidate in strategic leadership with an
-              emphasis on idealized design strategic consulting and systems
-              thinking. His doctoral thesis research focuses on innovations in
-              the cannabis and industrial hemp industry. As an experienced
-              healthcare entrepreneur, his success has been augmented through
-              experiences in the airline industry, the Department of Homeland
-              Security, insurance and financial services, and the medical device
-              industry.
-            </div>
-            <p className="text-black mt-2 lg:text-lg">
-              John is an accomplished senior leader and former military officer
-              with executive expertise in nationally ranked healthcare
-              organizations, with extensive success in consulting, strategic
-              planning, operations, and innovation. He is skilled in performing
-              in complex environments with product and loss, profitability,
-              growth, and revenue responsibilities. Adept at executive coaching
-              and developing healthcare professionals and entrepreneurs., John
-              has provided coaching and mentoring to several healthcare
-              startups, including Avicenna, MyEzHealth, and Health Connect.
-            </p>
-          </div>
-        </div>
-      </LayoutWrapper>
-    </div>
-  );
+interface Podcast {
+  title: string;
+  description: string;
+  youtubeId: string;
+  date: string;
+  host: string;
+  guests?: string[];
+  duration?: string;
 }
 
-export default Page;
+const podcasts: Podcast[] = [
+  {
+    title: "AI & The Future of Surgical Precision",
+    description:
+      "Saad Khan interviews Dr. Sarah Nelson about how AI, robotics, and data science are making every instrument—and every surgery—safer, faster, and more precise. From the US to Europe, discover where medtech is headed.",
+    youtubeId: "v1I7aAxy0iQ",
+    date: "2025-06-29",
+    host: "Saad Khan",
+    guests: ["Dr. Sarah Nelson"],
+    duration: "42 min",
+  },
+  {
+    title: "How Quality Instruments Save Lives",
+    description: "Dr. Samir reveals why surgical tool quality is make-or-break in the OR.",
+    youtubeId: "qGQ3rV4z5Ng",
+    date: "2025-05-17",
+    host: "Saad Khan",
+    duration: "38 min",
+  },
+  {
+    title: "The Global Future of Healthcare Procurement",
+    description: "Panel with US and EU buyers: Trends, mistakes, and the future.",
+    youtubeId: "E7wJTI-1dvQ",
+    date: "2025-04-04",
+    host: "Saad Khan",
+    duration: "51 min",
+  },
+  {
+    title: "Innovations in Medical Device Supply",
+    description: "Saad Khan breaks down the tech and logistics trends reshaping the industry.",
+    youtubeId: "gC-0LJxE1UQ",
+    date: "2025-03-15",
+    host: "Saad Khan",
+    duration: "29 min",
+  },
+  {
+    title: "How Quality Instruments Save Lives",
+    description: "Dr. Samir reveals why surgical tool quality is make-or-break in the OR.",
+    youtubeId: "qGQf3rV4z5Ng",
+    date: "2025-05-17",
+    host: "Saad Khan",
+    duration: "38 min",
+  },
+  {
+    title: "The Global Future of Healthcare Procurement",
+    description: "Panel with US and EU buyers: Trends, mistakes, and the future.",
+    youtubeId: "E7wJfTdI-1dvQ",
+    date: "2025-04-04",
+    host: "Saad Khan",
+    duration: "51 min",
+  },
+  {
+    title: "Innovations in Medical Device Supply",
+    description: "Saad Khan breaks down the tech and logistics trends reshaping the industry.",
+    youtubeId: "gC-0LJxEs1UQ",
+    date: "2025-03-15",
+    host: "Saad Khan",
+    duration: "29 min",
+  },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.10 + i * 0.12, duration: 0.65, ease: [0.16, 1, 0.3, 1] },
+  }),
+};
+
+function formatDisplayDate(dateStr: string) {
+  if (!dateStr) return "";
+  const d = new Date(dateStr);
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+
+// Clamp description to 4 lines for clean layout
+const clampDesc =
+  "line-clamp-4 sm:line-clamp-4 md:line-clamp-5 xl:line-clamp-6 overflow-hidden";
+
+const keywords = [
+  "podcasts",
+  "healthcare podcast",
+  "energy podcast",
+  "upcoming podcast",
+  "medical podcast",
+  "healthcare innovation",
+  "podcast system",
+  "business podcast",
+  "sustainable business",
+  "medtech podcast",
+  "hospital podcast",
+  "business empowerment",
+  "industry insights",
+];
+
+const PodcastPage: React.FC = () => {
+  const sortedPodcasts = [...podcasts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
+  return (
+    <LayoutWrapper className="pt-0 pb-24 min-h-screen">
+      {/* Animated Hero */}
+      <motion.section
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative w-full py-16 md:py-20 flex flex-col items-center justify-center overflow-hidden rounded-3xl"
+      >
+        {/* BG Gradient Animation */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.25, duration: 1.2 }}
+          className="absolute inset-0 pointer-events-none z-0"
+        >
+          <div className="w-full h-full bg-gradient-to-tr from-[#00808011] via-[#00808033] to-transparent animate-pulse" />
+        </motion.div>
+        <div className="relative z-10 max-w-3xl text-center px-3">
+          <motion.h1
+            initial={{ scale: 0.92, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.7, type: "spring" }}
+            className="text-4xl md:text-5xl font-black text-[#008080] mb-2 tracking-tight"
+          >
+            Podcasts
+          </motion.h1>
+          <motion.h2
+            initial={{ x: 80, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-xl md:text-2xl text-black font-semibold mb-3"
+          >
+          </motion.h2>
+          <motion.h3
+            initial={{ y: 24, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.65, duration: 0.7 }}
+            className="text-lg md:text-xl text-[#008080] font-semibold mb-6"
+          >
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.9, duration: 0.9 }}
+            className="text-gray-700 text-base md:text-lg leading-relaxed"
+          >
+            Join us on a journey through the intricacies of the energy and healthcare industries, where we delve deep into innovative solutions tailored to empower your business for sustainable success and societal impact.
+          </motion.p>
+        </div>
+        {/* Keyword area */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2, duration: 0.7 }}
+          className="relative z-10 mt-8 flex flex-wrap justify-center gap-2 px-2"
+        >
+          {keywords.map((kw) => (
+            <span
+              key={kw}
+              className="bg-[#00808011] text-[#008080] border border-[#00808030] rounded-xl px-3 py-1 text-xs font-medium m-1 transition-all hover:bg-[#00808022]"
+            >
+              {kw}
+            </span>
+          ))}
+        </motion.div>
+      </motion.section>
+
+      {/* Podcast Grid */}
+      <div className="max-w-7xl mx-auto px-2 md:px-4 mt-10">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-9">
+          <AnimatePresence>
+            {sortedPodcasts.map((podcast, i) => (
+              <motion.div
+                key={podcast.youtubeId}
+                custom={i}
+                initial="hidden"
+                whileInView="show"
+                exit="hidden"
+                viewport={{ once: true, amount: 0.25 }}
+                variants={fadeUp}
+                className="group bg-[#f7f7f7] border border-[#00808020] rounded-2xl shadow-[0_4px_24px_0_rgba(0,128,128,0.08)] overflow-hidden flex flex-col min-h-[350px] max-h-[500px] transition-all duration-200 hover:scale-[1.025] hover:shadow-[0_6px_40px_0_rgba(0,128,128,0.12)]"
+              >
+                {/* Video */}
+                <div className="aspect-w-16 aspect-h-9 w-full bg-gray-200">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${podcast.youtubeId}`}
+                    title={podcast.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full rounded-t-2xl"
+                    loading="lazy"
+                  />
+                </div>
+                {/* Content */}
+                <div className="p-4 flex-1 flex flex-col">
+                  <a
+                    href={`https://www.youtube.com/watch?v=${podcast.youtubeId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block focus:outline-none group"
+                  >
+                    <h4 className="text-lg font-bold text-[#008080] mb-2 transition-colors duration-150 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4">
+                      {podcast.title}
+                    </h4>
+                  </a>
+                  <p className={`${clampDesc} text-gray-700 text-sm mb-3 flex-1`}>
+                    {podcast.description}
+                  </p>
+                  <div className="flex flex-row items-center justify-between mt-auto">
+                    <span className="text-xs text-[#008080] font-semibold">
+                      Host: {podcast.host}
+                    </span>
+                    <span className="text-xs text-gray-400 ml-2">{formatDisplayDate(podcast.date)}</span>
+                    {podcast.duration && (
+                      <span className="text-xs text-gray-500 ml-3">{podcast.duration}</span>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+      </div>
+    </LayoutWrapper>
+  );
+};
+
+export default PodcastPage;

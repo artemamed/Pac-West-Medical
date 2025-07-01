@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "IFU | Medical Equimpent Suppliers",
+  description: "IFU (Instructions for Use) | Trusted Medical Equipment Suppliers – Providing detailed product guidelines and high-quality equipment for safe medical use.",
 };
 
 export default function RootLayout({

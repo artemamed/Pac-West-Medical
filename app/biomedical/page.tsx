@@ -12,22 +12,16 @@ const Page = () => {
     <LayoutWrapper className="min-h-screen">
       <div className="m-6">
         <div className="my-4">
-        <h1 className="text-2xl md:text-4xl font-semibold text-center text-[#004040] mb-6">
+          <h1 className="text-2xl md:text-4xl font-semibold text-center text-[#004040] mb-6">
             Biomedical Devices
           </h1>
           <div className="flex justify-center items-center ">
             <p className="  max-w-7xl text-lg">
-              Discover cutting-edge biomedical solutions at Artema Medical
-              Group, your authorized distributor of Vyaire&apos;s innovative
-              biomedical equipment. Our advanced devices seamlessly integrate
-              into healthcare ecosystems, advancing patient care worldwide.
-              Experience excellence in biomedical technology with Artema, your
-              trusted partner in shaping the future of medical advancements
-              through our authorized collaboration with Vyaire.
+              Explore innovative solutions in biomedicals at Pac West, which is an authorized distributor of Vyaire (which is a provider of innovative biomedical products). We are the leaders in the development of consistent medical environments, as our high-tech devices perfectly fit the fields of healthcare in any country. Make yourself reliant on the quality in biomedical technology, and become a reliable partner in opening up new horizons in the field of medical achievements when using Pac West, the authorized dealer of Vyaire.
             </p>{" "}
           </div>
         </div>
-       
+
       </div>
       <div className=" grid grid-cols-1 mx-4    sm:grid-cols-2 md:grid-cols-3  gap-4  lg:grid-cols-4 ">
         {cards.map((card, index) => (

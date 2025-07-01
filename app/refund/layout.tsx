@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Refund Policy | Medical Instruments | Pacwest",
+  description: "Understand Pacwest’s refund policy for medical instruments, ensuring hassle-free returns and customer satisfaction with clear terms and conditions.",
 };
 
 export default function RootLayout({

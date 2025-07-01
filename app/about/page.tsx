@@ -11,9 +11,9 @@ type Stat = {
 };
 
 const About: React.FC = () => {
-    const heading = "Best Medical Equipment Manufacturers";
+    const heading = "Surgical Instrument suppliers in the USA";
     const subheading =
-        "Trusted by medical professionals and agencies worldwide for reliable and precise medical equipment that enhances patient satisfaction.";
+        "Pac West Surgical is one of the well-known Surgical Instruments Companies in the USA, which distributes surgical equipment both locally and internationally.";
 
     const stats: Stat[] = useMemo(() => [
         { title: "Years", description: "In Healthcare Innovation", value: 40, data: "Years" },
@@ -80,40 +80,35 @@ const About: React.FC = () => {
 
             <section className="flex flex-wrap items-center justify-between px-4 md:px-16 py-8 md:py-24">
                 <div className="flex flex-col items-center md:w-1/3 text-center">
-                    <div className="rounded-full flex items-center justify-center mt-12 xl:-mb-[2rem]">
+                    <div className="rounded-full flex items-center justify-center mt-12 xl:-mt-[3rem]">
                         <Image
                             width={300}
                             height={800}
-                            src="/images/About/building.png"
+                            src="/images/About/building2.svg"
                             alt="World Map"
-                            className="w-[200px] xl:w-[250px] object-contain"
+                            className="w-[200px] xl:w-[350px] object-contain"
                         />
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-semibold mt-4 text-[#004040]">1980</h2>
-                    <p className="text-[#666666] mt-4 text-sm md:text-base">
+                    {/* <h2 className="text-2xl md:text-4xl font-semibold mt-4 text-[#004040]">1980</h2> */}
+                    {/* <p className="text-[#666666] mt-4 text-sm md:text-base">
                         Company founded with the goal to revolutionize healthcare technology
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className="md:w-3/6 mt-8 md:mt-0 text-center md:text-left">
                     <h2 className="text-2xl md:text-4xl font-bold">
-                        Building a Legacy of Trust
+                        Our mission
                     </h2>
                     <p className="mt-6 text-sm md:text-base text-gray-700 text-justify  ">
-                        Founded over 40 years ago, our company set out with a singular vision: to raise the standard of the
-                        healthcare industry with the invention of innovative and precise medical tools. Our hard work and
-                        consistency have always made us proud and enabled us to win the trust of healthcare professionals on a
-                        global scale.
+                        We bring surgical equipment of the highest quality to healthcare providers in the USA to make surgical care dependable, as they have trusted equipment they can count on. We can help provide doctors and surgeons with tools that are of a global level and thus help in providing better patient outcomes.
                     </p>
                     <p className="mt-4 text-sm md:text-base text-gray-700 text-justify">
-                        Today, we provide our services through a network of more than 10 regional distributors
-                        and business partners in over 50 countries, covering three major continents of the world. We have
-                        shown consistent growth and are continuously improving ourselves.
+                        Our service is based on competent craftsmanship integrated with the contemporary production processes to provide the medical community with required, reliable, and reasonably priced instruments.
                     </p>
                 </div>
             </section>
 
-            <section className="flex flex-wrap px-4 md:px-16 py-8  ">
+            {/* <section className="flex flex-wrap px-4 md:px-16 py-8  ">
                 <div className="flex flex-col items-center md:w-1/3 text-center">
                     <h2 className="text-2xl md:text-4xl font-semibold text-[#004040]">2000</h2>
                     <p className="text-[#666666] mt-4 text-sm md:text-base text-justify">
@@ -130,7 +125,7 @@ const About: React.FC = () => {
                         className="w-[200px] md:w-[400px] xl:w-[500px] md:ml-[5rem] xl:ml-[10rem] object-contain"
                     />
                 </div>
-            </section>
+            </section> */}
 
             <section className="flex flex-wrap items-center justify-between px-4 md:px-16 py-8">
                 <div className="flex flex-col items-center md:w-1/3 text-center mx-auto md:mx-0">
@@ -138,7 +133,7 @@ const About: React.FC = () => {
                         <Image
                             width={1200}
                             height={1200}
-                            src="/images/About/quality.png"
+                            src="/images/About/quality1.png"
                             alt="World Map"
                             className="w-[250px] md:w-[500px] object-contain"
                         />
@@ -147,18 +142,13 @@ const About: React.FC = () => {
 
                 <div className="md:w-3/6 mt-8 md:mt-0 text-center md:text-left">
                     <h2 className="text-2xl md:text-4xl font-bold">
-                        Transparency, Reliability, and Innovation
+                        Our vision
                     </h2>
                     <p className="mt-6 text-sm md:text-base text-gray-700 text-justify">
-                        Our core values are at the root of all that we do. We always show who we are and what we can do and
-                        have never been dishonest with our work. We are a reliable agency that provides companies with high-
-                        quality tools to save time and build trust.
+                        We also see a future where the booming healthcare sector in the USA has globally competitive surgical instruments produced locally, that are on a par (or better) than the imported brands. We would like to become a household brand among the surgical tools used in both the government and non-government healthcare facilities; this can be achieved by being vigilant about investments in quality control, innovation, and customer service.
                     </p>
                     <p className="mt-4 text-sm md:text-base text-gray-700 text-justify">
-                        We have a highly skilled team of medical equipment
-                        manufacturers and surgeons committed to developing versatile surgical instruments and hospital
-                        equipment. By adhering to our core principles, we can continuously expand into new markets and grow
-                        our business internationally.
+                        Our Quality, Honesty, and  Reliability come at the forefront of our policy of using high-end stainless steel, High Standard Quality Control, Communication, and Prompt Delivery. The point is not that we sell instruments, but that we establish partnerships with people and establish trust in relationships. We are proud to be a surgical instrument supplier in the USA.
                     </p>
                 </div>
             </section>

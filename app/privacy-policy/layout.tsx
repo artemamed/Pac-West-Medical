@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Privacy policy Updates | Medical Instruments | Pacwest",
+  description: "Stay informed about the latest privacy policy updates protecting your data and ensuring secure transactions with Pacwest Medical Instruments.",
 };
 
 export default function RootLayout({

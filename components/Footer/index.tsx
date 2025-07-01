@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link, { LinkProps } from "next/link";
 import { ReactNode } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
 import { Mail } from "lucide-react";
 import image_logo from "@/public/images/Footer/footer_logo.png";
 import image1 from "@/public/images/Footer/footer1.png";
@@ -93,7 +93,7 @@ export default function Footer() {
       {/* Neon gradient blur background */}
       <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-[130vw] h-64 bg-gradient-to-br from-[#16f5a0]/20 via-[#3be2e2]/30 to-transparent blur-3xl opacity-60 pointer-events-none z-0"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-7 gap-8">
           {/* First Column - Brand / Address */}
           <div className="col-span-1 lg:col-span-2 flex flex-col">
             <div className="footer-glass-card flex flex-col items-center md:items-start p-6 h-full gap-2">
@@ -180,26 +180,26 @@ export default function Footer() {
               </ul>
               <div className="flex gap-4 mt-auto justify-center md:justify-start">
                 <FooterSocial
-                  href="https://www.facebook.com/profile.php?id=61556179106203"
+                  href="https://www.facebook.com/profile.php?id=61577684273986"
                   icon={<FaFacebook />}
                   label="Facebook"
                   hoverBg="hover:bg-[#1877F2]"
                 />
                 <FooterSocial
-                  href="https://www.instagram.com/surgical.medical.instruments/"
+                  href="https://www.instagram.com/surgical.insturments.us/"
                   icon={<FaInstagram />}
                   label="Instagram"
                   hoverBg="hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7]"
                 />
                 <FooterSocial
-                  href="https://www.linkedin.com/company/artema-medical-group/?viewAsMember=true"
+                  href="https://www.linkedin.com/company/107532322/admin/dashboard/"
                   icon={<FaLinkedin />}
                   label="LinkedIn"
                   hoverBg="hover:bg-[#0A66C2]"
                 />
                 <FooterSocial
-                  href="https://www.youtube.com/@ArtemaMedical"
-                  icon={<FaYoutube />}
+                  href="https://www.pinterest.com/pacwestsurgical/"
+                  icon={<FaPinterest />}
                   label="YouTube"
                   hoverBg="hover:bg-[#FF0000]"
                 />

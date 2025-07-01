@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Browse our Surgical Tools Inventory List",
+  description: "Browse our comprehensive surgical tools inventory list featuring high-quality, reliable instruments for Surgeons and healthcare providers.",
 };
 
 export default function RootLayout({

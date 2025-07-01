@@ -110,7 +110,7 @@ const Contact = () => {
                 </li> */}
                  <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3" />
-                  +1 (210) 468 7779
+                  +1 (210) 468 7778
                 </li>
                 <li className="flex items-center">
                   <Mail className="w-5 h-5 mr-3" />

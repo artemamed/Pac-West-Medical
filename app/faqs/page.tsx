@@ -4,35 +4,35 @@ import { Button } from '@/components/ui/button'
 import LayoutWrapper from '@/components/Wrapper/LayoutWrapper'
 import Image from 'next/image'
 import React from 'react'
-import image from "@/public/assets/faqs.png"
+import image from "@/public/assets/faqq.svg"
 import { useState } from 'react';
 import Link from 'next/link';
 
 const faqs = [
   {
-    question: 'Does Artema provide any shipping services to its customers?',
-    answer: 'Yes, Artema provides shipping services, but only upon the customer’s request with extra charges.',
+    question: 'What is the process of buying instruments at PasWest Surgical?',
+    answer: 'PacWest Surgical markets its product via authorized distributors. Yet, it is also possible to buy directly from PacWest Surgical. This will be premised on another agreement.'
   },
   {
-    question: 'Is Artema responsible for any damage to the instrument?',
-    answer: 'Yes, but only if the damage occurred within the company during manufacturing or final packaging. Once the instrument is dispatched, the company is not responsible. In both cases, the customer should provide proof of the claim.',
+    question: 'Which type of sterilization is appropriate for PacWest surgical instruments?',
+    answer: 'PacWest surgical instruments can be sterilized with any procedure stated in our instructions for use. Nevertheless, thoroughly advised fractionated vacuum steam sterilization at an assigned operating temperature.'
   },
   {
-    question: 'Does the product price mentioned on the website include tax?',
-    answer: 'Yes, tax is already included in the product description.',
-  }, {
-    question: 'Does Artema accept payments for the products only through a bank?',
-    answer: 'Yes, the company only accepts payments officially made through the bank. Cash payments are not accepted in any condition.',
-  }, {
-    question: 'Does the company take responsibility for the loss in case of any disaster?',
-    answer: 'Yes, the company should take responsibility for any loss, but only if it is the cause of the disaster. Otherwise, for all the social or natural circumstances that are beyond the control of the company, the customer should take responsibility.',
-  }, {
-    question: 'For how many days can the customer apply for a refund?',
-    answer: 'A customer can apply for a refund within three working days, provided it is not against the company policy.',
-  }, {
-    question: 'Does the company provide services other than surgical instruments?',
-    answer: 'Yes, the company also provides hospital furniture and physiotherapy instruments to its customers.',
-  }
+    question: 'What should I do, and do I need to clean Packwest Surgical instruments before sterilization?',
+    answer: 'Cleaning of instruments must be done before sterilisation. After any surgery, the remains may remain on the instruments, be it blood, bone, skin, or tissue. Sterilization of these instruments requires their residues to be eliminated. Otherwise, they may damage the instrument. These instruments may be cleaned manually (by brush), by machine, or by ultrasound. Instruments, whenever feasible, really ought to be cleaned or at any rate disassembled in the open condition. See usability.'
+  },
+  {
+    question: 'My shipment has been sent. Am I able to trace it?',
+    answer: 'Yes, you can track the status of an order. Once your order has been shipped, you will be provided with a tracking number by customer services.'
+  },
+  {
+    question: 'Are the surgical instruments of PacWest special?',
+    answer: 'Pacwest Surgical equipment must be placed in a non-moisture environment with dry air and free of dirt. The instruments should be stored in the shipping carton or a protective tray, preferably separately. Surround tips and edges with appropriate protection and ensure that there are no chemicals near or in the storage place. We advise you to reach us to get the instructions for use.'
+  },
+  {
+    question: 'How do you overcome a situation when you are unable to get a specific tool?',
+    answer: 'Our home page and our catalogues have several searching possibilities. You may query products using description, name, or item no.. Should you continue failing to identify a tool, make sure to contact our customer service so that it can help you locate the desired tool.'
+  },
 ];
 
 const Faqs = () => {
@@ -90,7 +90,7 @@ const Faqs = () => {
               alt="Setroscope Icon"
               width={300}
               height={200}
-              className="w-32 sm:w-40 md:w-48 xl:w-64 h-auto"
+              className="w-32 sm:w-40 md:w-48 xl:w-72 h-auto"
               priority
             />
           </div>

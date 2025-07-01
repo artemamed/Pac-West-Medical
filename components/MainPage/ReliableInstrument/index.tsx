@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import image from "@/public/images/Vector.svg"
+import image from "@/public/images/vector1.svg"
 import { Button } from "@/components/ui/button";
 import LayoutWrapper from "@/components/Wrapper/LayoutWrapper";
 import Link from "next/link";
@@ -14,7 +14,7 @@ const CardWithStethoscope = () => {
             <Image
               src={image}
               alt="Setroscope Icon"
-              width={400}
+              width={3000}
               className="w-[250px] md:w-[400px] h-auto"
               priority
             />

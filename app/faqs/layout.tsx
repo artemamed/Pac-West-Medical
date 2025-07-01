@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "FAQ's | Surgical Equipment | PacWest Surgical",
+  description: "Find answers to frequently asked questions about our surgical equipment, product quality, certifications, ordering, and support at PacWest Surgical.",
 };
 
 export default function RootLayout({
