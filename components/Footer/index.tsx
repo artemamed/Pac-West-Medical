@@ -104,8 +104,7 @@ export default function Footer() {
                 priority
               />
               <p className="text-gray-200 text-sm md:text-base mt-5 text-center md:text-left">
-                371-J Commercial, DHA EME Sector,
-                <br />Lahore, 53710
+                3262 E THOUSAND OAKS BLVD STE 204 THOUSAND OAKS, CA 91362
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-6">
                 <Image

@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "Cookies Policy | Pacwest Surgical Instruments Suppliers",
+  description: "Learn how Pacwest uses cookies to enhance your browsing experience, analyze website traffic, and support personalized services.",
 };
 
 export default function RootLayout({

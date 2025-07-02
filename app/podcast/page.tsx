@@ -132,14 +132,14 @@ const PodcastPage: React.FC = () => {
         >
           <div className="w-full h-full bg-gradient-to-tr from-[#00808011] via-[#00808033] to-transparent animate-pulse" />
         </motion.div>
-        <div className="relative z-10 max-w-3xl text-center px-3">
+        <div className="relative z-10 max-w-5xl text-center px-3">
           <motion.h1
             initial={{ scale: 0.92, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.7, type: "spring" }}
             className="text-4xl md:text-5xl font-black text-[#008080] mb-2 tracking-tight"
           >
-            Podcasts
+            Welcome to the Pac West channel 
           </motion.h1>
           <motion.h2
             initial={{ x: 80, opacity: 0 }}
@@ -161,7 +161,8 @@ const PodcastPage: React.FC = () => {
             transition={{ delay: 0.9, duration: 0.9 }}
             className="text-gray-700 text-base md:text-lg leading-relaxed"
           >
-            Join us on a journey through the intricacies of the energy and healthcare industries, where we delve deep into innovative solutions tailored to empower your business for sustainable success and societal impact.
+            Our videos are small in size and high quality, and they discuss surgical instruments, medical equipment, and medical processes.
+            We aim to provide current and valid knowledge to medical students, professionals, and healthcare suppliers.  Keep yourself entertained by learning about visual instructions, tutorials, and fast facts empowered by reliable medical sources.
           </motion.p>
         </div>
         {/* Keyword area */}

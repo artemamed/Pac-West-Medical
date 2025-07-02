@@ -108,25 +108,18 @@ const Contact = () => {
                   <Phone className="w-5 h-5 mr-3" />
                   042 32361469
                 </li> */}
-                 <li className="flex items-center">
+                <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3" />
-                  +1 (210) 468 7778
+                  +1 (805) 657 1866
                 </li>
                 <li className="flex items-center">
                   <Mail className="w-5 h-5 mr-3" />
-                  sales@artemamed.com
-                </li>
-                  <li className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3" />
-                  hr@artemamed.com
+                  bob_thomson@verizon.net
                 </li>
                 <li className="flex items-center">
                   <MapPin className="w-8 h-8 md:w-5 md:h-5 mr-3" />
-                  371-J Commercial, DHA EME Sector, Lahore, 53710
-                </li>
-                 <li className="flex items-center">
-                  <MapPin className="w-8 h-8 md:w-5 md:h-5 mr-3" />
-                  7901 4th St. N STE 10963, Saint Peterburg, Florida, 33702
+                  3262 E THOUSAND OAKS BLVD STE 204
+                  <br /> THOUSAND OAKS, CA 91362
                 </li>
               </ul>
               <Image
@@ -304,8 +297,7 @@ const Contact = () => {
 
         {/* Google Map */}
         <iframe
-          // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3527.879364710834!2d-82.64314161629683!3d27.844245514491146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e6a2b7855c1f%3A0x4e3e0f613f7708f7!2s7901%204th%20St%20N%2C%20St.%20Petersburg%2C%20FL%2033702%2C%20USA!5e0!3m2!1sen!2s!4v1734932587848!5m2!1sen!2s"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13615.815782487447!2d74.1889157871582!3d31.442934800000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3918ff4ff98c2f9f%3A0x3b0ba373f6f14701!2sArtema%20Medical%20Group!5e0!3m2!1sen!2s!4v1738668454880!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.1691020553744!2d-118.83659182422939!3d34.16759397311372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e8251f3ddbe8e7%3A0x2cb57570e6c38c9b!2s3262%20E%20Thousand%20Oaks%20Blvd%20%23204%2C%20Thousand%20Oaks%2C%20CA%2091362%2C%20USA!5e0!3m2!1sen!2s!4v1751431847510!5m2!1sen!2s"
           width="100%"
           className="rounded-lg shadow-md h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] mx-auto"
           allowFullScreen

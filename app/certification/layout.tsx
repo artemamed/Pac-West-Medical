@@ -2,8 +2,8 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "PacWest Surgical Tools are Certified in USA ",
+  description: "PacWest surgical tools are certified in the USA, ensuring top-quality, safety, and reliability for medical buyers and healthcare facilities.",
 };
 
 export default function RootLayout({

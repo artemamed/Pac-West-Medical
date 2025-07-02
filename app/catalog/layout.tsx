@@ -2,7 +2,7 @@ import ScrollTop from "@/components/Buttons/ScrollTop";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "View Our latest Instruments Catalogue",
+  title: "View Our latest Instruments Catalogue | Pacwest",
   description: "Explore our latest surgical instruments catalogue featuring high-quality, precision tools designed for medical professionals and healthcare facilities.",
 };
 
